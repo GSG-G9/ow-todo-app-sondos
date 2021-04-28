@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector } from 'react-redux';
 import TodoItem from '../TodoItem';
 import './style.css';
 import {selectVisibleTodoIds} from '../../selectors';
