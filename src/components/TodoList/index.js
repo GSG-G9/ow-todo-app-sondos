@@ -4,8 +4,6 @@ import TodoItem from '../TodoItem';
 import './style.css';
 import {selectVisibleTodoIds} from '../../selectors';
 
-const selectTodoIds = (state) => state.todoReducer.map((todo) => todo.id)
-
 const TodoList = () => {
   const todoIds = useSelector(selectVisibleTodoIds);
 

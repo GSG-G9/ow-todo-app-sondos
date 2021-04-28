@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 .App {
   text-align: center;
-  background-color: rgb(180, 179, 179);
-  background-image: url(./images/bg-desktop-light.jpg);
-  background-repeat: no-repeat;
+  /* background-image: url(./images/bg-desktop-light.jpg); */
+  /* background-repeat: no-repeat;
   background-size: 100% auto;
-  min-height: 100vh;
+  min-height: 100vh; */
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
 
   
 }
