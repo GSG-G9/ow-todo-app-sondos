@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 import TodoItem from '../TodoItem';
-import './style.css'
+import './style.css';
+import {selectVisibleTodoIds} from '../../selectors';
 
 const selectTodoIds = (state) => state.todoReducer.map((todo) => todo.id)
 
 const TodoList = () => {
-  const todoIds = useSelector(selectTodoIds, shallowEqual)
+  const todoIds = useSelector(selectVisibleTodoIds);
 
   const renderedListItems = todoIds.map((todoId) => {
     return <TodoItem key={todoId} id={todoId} />
@@ -15,4 +16,4 @@ const TodoList = () => {
   return <ul className="todo-list">{renderedListItems}</ul>
 }
 
-export default TodoList
+export default TodoList;
