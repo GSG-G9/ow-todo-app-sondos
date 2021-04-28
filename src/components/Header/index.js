@@ -1,12 +1,23 @@
 import React from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import {toggleDarkTheme} from '../../actions'
 import './style.css';
-import moon from '../../images/icon-moon.svg'
 
 const Header = () => {
+  const darkThemeEnabled = useSelector((state) => state.themeReducer.darkThemeEnabled);
+  const dispatch = useDispatch();
   return (
     <div className="image-container">
       <p className="todo-text">TODO</p>
-      <img alt="dark mode" src={moon} className="mode-converter"/>
+      <input
+        className="mode-converter"
+        type="checkbox"
+        id="checkboxid"
+        checked={darkThemeEnabled}
+        onChange={() => dispatch(toggleDarkTheme())}
+        
+      ></input>
+      <label for="checkboxid" className="mode-label"></label>
     </div>
   )
 }

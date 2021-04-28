@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
-import rootReducer from './reducers'
+import rootReducer from './reducers';
+import DarkThemeProvider from './DarkThemeProvider';
+import {Container} from './theme';
 import {addTodo, deleteTodo, setVisibilityFilter, completeTodo, clearCompletedTodo, toggleDarkTheme} from './actions'
 
 const store = createStore(rootReducer)
+
 
 // let preloadedState;
 // const persistedTodosString = localStorage.getItem('todos')
@@ -35,7 +38,11 @@ store.subscribe(() =>
 
 ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <DarkThemeProvider>
+        <Container>
+          <App />
+        </Container>
+      </DarkThemeProvider>
     </Provider>,
   document.getElementById('root')
 );

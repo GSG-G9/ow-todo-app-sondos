@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 .main-container{
   margin: auto;
   margin-top: 50px;
   width: 30%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
 
 }
 .todo-input{
-  height: 50px;
+  height: 60px;
   outline: none;
   border-radius: 5px;
   border: none;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-left: 60px;
+  font-size: 18px;
 }
 .todos-footer-container{
-  margin-top: 20px;
   border-radius: 5px;
-  background: white;
 }

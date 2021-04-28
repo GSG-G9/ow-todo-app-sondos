@@ -3,7 +3,9 @@ import { useDispatch } from 'react-redux';
 import './style.css';
 import {addTodo} from '../../actions';
 import TodoList from '../TodoList';
-import Footer from '../Footer'
+import Footer from '../Footer';
+import {Input, MainSectionContainer} from '../../theme'
+
 
 const MainContainer = () => {
   const [text, setText] = useState('');
@@ -19,18 +21,21 @@ const MainContainer = () => {
   }
 
   return (
+    
     <div className="main-container">
-      <input 
+      <Input
        type="text"
        className="todo-input"
        placeholder="Create a new todo ..."
        value={text}
        onChange={handleChange}
-       onKeyDown={handleKeyDown}></input>
-       <div className="todos-footer-container">
-        <TodoList />
-        <Footer />
-       </div>
+       onKeyDown={handleKeyDown}></Input>
+       <MainSectionContainer>
+         <div className="todos-footer-container">
+            <TodoList />
+            <Footer />
+         </div>
+       </MainSectionContainer>
     </div>
   )
 }
