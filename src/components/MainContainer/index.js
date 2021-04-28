@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './style.css';
-import {addTodo} from '../../actions'
-import TodoList from '../TodoList'
+import {addTodo} from '../../actions';
+import TodoList from '../TodoList';
+import Footer from '../Footer'
 
 const MainContainer = () => {
   const [text, setText] = useState('');
@@ -11,9 +12,8 @@ const MainContainer = () => {
   const handleChange = (e) => setText(e.target.value)
 
   const handleKeyDown = (e) => {
-    const trimmedText = text.trim()
-    if (e.which === 13 && trimmedText) {
-      dispatch(addTodo(trimmedText))
+    if (e.which === 13 && text) {
+      dispatch(addTodo(text))
       setText('')
     }
   }
@@ -27,8 +27,9 @@ const MainContainer = () => {
        value={text}
        onChange={handleChange}
        onKeyDown={handleKeyDown}></input>
-       <div>
+       <div className="todos-footer-container">
         <TodoList />
+        <Footer />
        </div>
     </div>
   )

@@ -1,0 +1,21 @@
+.footer{
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+.selected{
+  color: #3F7EFD;
+}
+.filters{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width:35%;
+}
+.filter-link{
+  cursor: pointer;
+}
+.clear-completed{
+  cursor: pointer;
+}
