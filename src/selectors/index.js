@@ -23,11 +23,6 @@ const selectVisibleTodoIds = createSelector(
   filteredTodos => filteredTodos.map(todo => todo.id)
 )
 
-// const selectActiveCount = (state) => {
-//   const activeTodos = state.todoReducer.filter(todo=> !todo.completed);
-//   return activeTodos.length;
-// }
-
 const selectActiveTodosCount = createSelector(
   getTodos,
   (todos) => {
