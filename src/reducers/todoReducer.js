@@ -3,11 +3,7 @@ const nextTodoId = (todoList) => {
   return maxId + 1
 }
 const initialState = [
- {
-   id: 0,
-   text : 'Learn Redux',
-   completed: false,
- }
+
 ]
 
 const todoReducer = (state = initialState, action) => {
