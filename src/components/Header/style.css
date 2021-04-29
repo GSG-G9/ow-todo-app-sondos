@@ -2,14 +2,10 @@
   margin: 0;
 }
 .image-container{
-  /* background-color: black;
-  background-image: url(../../images/bg-desktop-light.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  min-height: 100vh; */
-  width: 100%;
+  margin: auto;
+  width: 600px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 100px;
 
 }
@@ -18,7 +14,7 @@
   background-image: url(../../images/icon-moon.svg);
 }
 .todo-text{
-  width: 500px;
+
   text-align:start;
   color: aliceblue;
   font-size: 40px;
@@ -47,4 +43,17 @@ input[type=checkbox].mode-converter{
   width: 30px;
   height: 30px;
   background-repeat: no-repeat;
+}
+@media only screen and (max-width :500px){
+ .image-container{
+   width: 90%;
+   padding-top: 50px;
+   justify-content: space-between;
+   margin: auto;
+ }
+ .todo-text{
+   width: auto;
+   text-align:center;
+  
+ }
 }

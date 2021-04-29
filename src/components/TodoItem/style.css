@@ -54,7 +54,10 @@
   width: 0;
 }
 .todo-label input:checked ~ .checkmark {
-  background-color: #C058F3;
+  background-image: linear-gradient(#57ddff,#c058f3);
+}
+ .checkmark:hover{
+  border-color: #c058f3;
 }
 .todo-label .checkmark:after {
   left: 9px;

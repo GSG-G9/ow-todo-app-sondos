@@ -18,6 +18,29 @@
 .filter-link{
   cursor: pointer;
 }
+.filter-link:hover{
+  color: #484B6A;
+}
 .clear-completed{
   cursor: pointer;
+}
+.clear-completed:hover{
+  color: #484B6A;
+}
+@media only screen and (max-width :500px){
+  .footer{
+    flex-wrap: wrap;
+    padding-top: 20px;
+    box-sizing: border-box;
+  }
+  .filters{
+    width:100%;
+    order: 3;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 50px;
+    height: 60px;
+    align-items: center;
+    
+  }
 }
