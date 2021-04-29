@@ -26,5 +26,6 @@
   .main-container{
     width: 90%;
     margin-top: 20px;
+    gap: 30px;
   }
 }
