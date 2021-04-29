@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 import classnames from 'classnames';
 import {setVisibilityFilter, clearCompletedTodo} from '../../actions';
-import {selectActiveTodosCount, getFilter} from '../../selectors'
+import {selectActiveTodosCount, getFilter} from '../../selectors';
+import {FiltersContainer, FooterContainer} from '../../theme'
 
 const filterTitles = {
   'showAll': 'All',
@@ -33,17 +34,19 @@ const Footer = () => {
   const onStatusChange = (status) => dispatch(setVisibilityFilter(status));
 
   return (
-    <div className="footer">
+    <FooterContainer className="footer">
       <span> {activeTodosCount} Items left</span>
-      <ul className="filters">
-        {Object.keys(filterTitles).map(filter =>
-          <li key={filter}>
-            <FilterButton onChange={onStatusChange} filter={filter}/>
-          </li>
-        )}
-      </ul>
+     
+        <FiltersContainer className="filters">
+          {Object.keys(filterTitles).map(filter =>
+            <li key={filter}>
+              <FilterButton onChange={onStatusChange} filter={filter}/>
+            </li>
+          )}
+        </FiltersContainer>
+     
       <a onClick= {handleClearCompleted} className="clear-completed">Clear Completed</a>
-    </div>
+    </FooterContainer>
 
   )
 }
